@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Emblema+One&family=Praise&family=Sarina&display=swap');
+
+html {
+    background-image: url(gradient-background.png); 
+    height: 100%;
+    background-size: cover;
+  }
+
+  body {
+    text-align: center;
+    margin-top: 150px;
+  }
+
+  #intro {
+    color: white;
+  }
+
+  #intro h3 {
+    font-size: 20px;
+    font-family: 'Aboreto', cursive;
+    margin-bottom: 0px;
+  }
+
+  #intro h1 {
+    margin-top: 0px;
+    font-family: 'Praise', cursive;
+    font-size: 96px;
+    filter: drop-shadow(0 0 14px #E6ADEC);
+  }
+
+  /* #intro h1 #rock-title:hover, #paper-title:hover, #scissors-title:hover {
+    filter: drop-shadow(0 0 14px #462255);
+  } */
+
+  #rock, #paper, #scissors {
+    font-size: 90px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    transition: 0.3s;
+    padding: 50px;
+    padding-top: 0px;
+  }
+
+  #rock:hover, #paper:hover, #scissors:hover {
+    font-size: 100px;
+    filter: drop-shadow(0 0 14px #462255);
+    cursor: pointer;
+  }
+  
+  #results, #score, #computer {
+    font-size: 20px;
+    font-family: 'Aboreto', cursive;
+    color: white;
+  }
+
+  #computer {
+    font-size: 20px;
+    font-family: 'Aboreto', cursive;
+    color: #F0D3F7;
+    padding-bottom: 30px;
+  }
+
+  #results {
+    font-size: 30px;
+    padding-bottom: 30px;
+  }
+
+  #score {
+    padding-top: 200px;
+  }
