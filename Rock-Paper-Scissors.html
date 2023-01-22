@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Page Title</title>
+</head>
+<body>
+  <script>
+    const playOptions = ['rock', 'paper', 'scissors'];
+    function getComputerChoice() {
+      let randomNum = Math.floor(Math.random() * 3);
+      return playOptions[randomNum];
+    }
+
+    function playRound(playerSelection, computerSelection) {
+      if (playerSelection == computerSelection) {
+        return "A tie! No one wins";
+      }
+      else if (playerSelection.toLowerCase() == 'paper' && computerSelection == 'rock') {
+        return "You Win! Paper beats Rock";
+      }
+      else if (playerSelection.toLowerCase() == 'rock' && computerSelection == 'scissors') {
+        return "You Win! Rock beats Scissors";
+      }
+      else if (playerSelection.toLowerCase() == 'scissors' && computerSelection == 'paper') {
+        return "You Win! Scissors beats Paper";
+      }
+      else if (computerSelection == 'paper' && playerSelection.toLowerCase() == 'rock') {
+        return "You Lose! Paper beats Rock";
+      }
+      else if (computerSelection == 'rock' && playerSelection.toLowerCase() == 'scissors') {
+        return "You Lose! Rock beats Scissors";
+      }
+      else if (computerSelection == 'scissors' && playerSelection.toLowerCase() == 'paper') {
+        return "You Lose! Scissors beats Paper";
+      }
+      else {
+        return "Invalid input, cannot run game!";
+      }
+    }
+
+    function game() {
+      let playerScore = 0;
+      let computerScore = 0;
+        // play for 5 rounds
+        for (let i = 0; i < 5; i++) {
+          // prompt input from player
+          let selection = prompt("Your pick?");
+          // play round against computer
+          let round = playRound(selection, getComputerChoice());
+          // display outcome
+          console.log(round);
+          // if player won, add to the score
+          if (round.includes('Win!')) {
+          playerScore++;
+          }
+          else if (round.includes('Lose!')){
+            computerScore++;
+          }
+        }
+      return 'Your score: ' + playerScore +
+             ' Computer score: ' + computerScore;
+    }
+
+    
+  </script>
+</body>
+</html>
